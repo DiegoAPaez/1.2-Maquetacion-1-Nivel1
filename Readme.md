@@ -8,7 +8,7 @@ HTML, CSS (Using SASS), JavaScript.
 
 📋 Requirements - 🛠️ Installation
 
-No installation or additional dependencies are required.
+SASS is required to compile `.scss` files in case of modification of the styles. You can install SASS globally using npm with the command `npm install -g sass`. To compile `.scss` files, run `sass input.scss output.css` in the terminal.
 
 ▶️ Execution
 
