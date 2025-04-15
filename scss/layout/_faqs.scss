@@ -1,0 +1,97 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.faqs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-title {
+            text-align: center;
+            margin: 5rem auto 0 auto;
+        }
+
+        &-text {
+            text-align: center;
+            color: variables.$text-grey;
+            width: 60%;
+            font-size: 2rem;
+            line-height: 3.5rem;
+        }
+    }
+
+    &__tabs {
+        width: 50%;
+        margin: 2rem auto;
+
+        &-divider {
+            opacity: 25%;
+        }
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include mixins.hover-text(variables.$red-bg);
+
+            &-question {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &-answer {
+                color: variables.$text-grey;
+                line-height: 3rem;
+                display: none;
+            }
+
+            &.active &-answer {
+                display: block;
+            }
+
+            &.active &-question {
+                img {
+                    transform: rotate(180deg);
+                    filter: invert(0.7) sepia(72%) saturate(983%)
+                        hue-rotate(319deg) brightness(119%) contrast(97%);
+                }
+            }
+        }
+    }
+
+    &__button {
+        margin: 5rem auto;
+
+        &-link {
+            background-color: variables.$blue-bg;
+            color: variables.$grey-bg;
+            padding: 2rem 3rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .faqs {
+        &__header {
+            &-text {
+                width: 80%;
+            }
+        }
+        &__tabs {
+            width: 80%;
+        }
+    }
+}
