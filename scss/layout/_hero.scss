@@ -1,0 +1,121 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.hero {
+    display: flex;
+    margin: 8rem auto;
+    gap: 5rem;
+
+    &__info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        &-text {
+            font-size: 2rem;
+            color: variables.$text-grey;
+            line-height: 3.5rem;
+        }
+
+        &-button {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            gap: 2rem;
+            margin: 2rem 0;
+            font-weight: 700;
+
+            &--chrome,
+            &--firefox {
+                padding: 2rem 3rem;
+                border-radius: 0.5rem;
+                border: 2px solid transparent;
+            }
+
+            &--chrome {
+                background-color: variables.$blue-bg;
+                color: variables.$grey-bg;
+
+                @include mixins.hover-button(
+                    variables.$grey-bg,
+                    variables.$blue-bg,
+                    variables.$blue-bg
+                );
+            }
+
+            &--firefox {
+                @include mixins.hover-button(
+                    variables.$grey-bg,
+                    variables.$blue-bg-dark,
+                    variables.$blue-bg-dark
+                );
+            }
+        }
+    }
+
+    &__img {
+        flex: 1;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        flex: 1;
+
+        &__info {
+            width: 80%;
+            margin: 1rem auto;
+            order: 2;
+            align-items: center;
+            justify-content: space-evenly;
+
+            &-title,
+            &-text {
+                text-align: center;
+            }
+
+            &-button {
+                margin: 2rem auto;
+
+                &--chrome,
+                &--firefox {
+                    padding: 2rem;
+                }
+            }
+        }
+
+        &__img {
+            order: 1;
+
+            &::before {
+                position: absolute;
+                z-index: -1;
+                content: "";
+                top: 30%;
+                left: 30%;
+                height: 70%;
+                width: 100vw;
+                border-bottom-left-radius: 15rem;
+                background-color: variables.$blue-bg;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero__img::before {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        top: 30%;
+        left: 30%;
+        height: 80%;
+        width: 100vw;
+        border-bottom-left-radius: 15rem;
+        background-color: variables.$blue-bg;
+    }
+}
