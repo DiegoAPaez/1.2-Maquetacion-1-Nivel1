@@ -1,23 +1,25 @@
 {
-  "name": "s1-2-maquetacion1-n1",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DiegoAPaez/1.2-Maquetacion-1-Nivel1.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DiegoAPaez/1.2-Maquetacion-1-Nivel1/issues"
-  },
-  "homepage": "https://github.com/DiegoAPaez/1.2-Maquetacion-1-Nivel1#readme",
-  "dependencies": {
-    "bootstrap": "^5.3.5",
-    "sass-migrator": "^2.3.1"
-  }
+    "name": "s1-2-maquetacion1-n1",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DiegoAPaez/1.2-Maquetacion-1-Nivel1.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/DiegoAPaez/1.2-Maquetacion-1-Nivel1/issues"
+    },
+    "homepage": "https://github.com/DiegoAPaez/1.2-Maquetacion-1-Nivel1#readme",
+    "dependencies": {
+        "@tailwindcss/cli": "^4.1.4",
+        "bootstrap": "^5.3.5",
+        "sass-migrator": "^2.3.1",
+        "tailwindcss": "^4.1.4"
+    }
 }

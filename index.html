@@ -3,41 +3,70 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <title>Sprint 1 - Maquetacion I</title>
     </head>
     <body>
-        <header class="container">
-            <div class="header__nav-bar">
+        <header class="max-w-[1200px] mx-auto my-5 py-10 text-gray-700">
+            <div
+                class="header__nav-bar max-w-[1100px] w-[80%] md:w-full mx-auto md:mx-0 flex flex-row justify-between items-center"
+            >
                 <img
+                    class="header__nav-bar-bookmark"
                     src="resources/Imagenes/logo-bookmark.svg"
                     alt="logo-bookmark"
                 />
 
                 <img
-                    class="header__nav-bar-icon-hamburger"
+                    class="header__nav-bar-icon-hamburger md:hidden"
                     src="resources/Imagenes/icon-hamburger.svg"
                     alt="Menu"
                 />
                 <img
-                    class="header__nav-bar-icon-close"
+                    class="header__nav-bar-icon-close hidden md:hidden"
                     src="resources/Imagenes/icon-close.svg"
                     alt="Close-Menu"
                 />
 
-                <nav class="header__nav-bar-list">
-                    <hr class="header__nav-bar-list-divider" />
-                    <a class="header__nav-bar-list-link" href="#">Features</a>
-                    <hr class="header__nav-bar-list-divider" />
-                    <a class="header__nav-bar-list-link" href="#">Pricing</a>
-                    <hr class="header__nav-bar-list-divider" />
-                    <a class="header__nav-bar-list-link" href="#">Contact</a>
-                    <hr class="header__nav-bar-list-divider" />
-                    <a class="header__nav-bar-list-link--login shadow" href="#"
+                <nav
+                    class="header__nav-bar-list hidden md:grid md:grid-cols-4 justify-items-center items-center text-(--color-grey-bg) md:text-(--color-text-black) uppercase font-medium tracking-widest bg-(--color-semi-transparent-bg) md:bg-transparent"
+                >
+                    <hr
+                        class="header__nav-bar-list-divider w-[80%] md:hidden opacity-30"
+                    />
+                    <a
+                        class="header__nav-bar-list-link md:hover:text-(--color-red-bg) py-3 px-6"
+                        href="#"
+                        >Features</a
+                    >
+                    <hr
+                        class="header__nav-bar-list-divider w-[80%] md:hidden opacity-30"
+                    />
+                    <a
+                        class="header__nav-bar-list-link md:hover:text-(--color-red-bg) py-3 px-6"
+                        href="#"
+                        >Pricing</a
+                    >
+                    <hr
+                        class="header__nav-bar-list-divider w-[80%] md:hidden opacity-30"
+                    />
+                    <a
+                        class="header__nav-bar-list-link md:hover:text-(--color-red-bg) py-3 px-6"
+                        href="#"
+                        >Contact</a
+                    >
+                    <hr
+                        class="header__nav-bar-list-divider w-[80%] md:hidden opacity-30"
+                    />
+                    <a
+                        class="header__nav-bar-list-link--login shadow md:bg-(--color-red-bg) md:text-white border-white md:border-transparent rounded-lg py-10 md:py-5 px-15 md:hover:bg-white md:hover:text-red-400 md:hover:border-red-400 border-2 text-center w-[80%] md:w-full my-5 md:my-0"
+                        href="#"
                         >Login</a
                     >
-                    <div class="header__nav-bar-list-link-social">
+                    <div
+                        class="header__nav-bar-list-link-social hidden md:hidden flex-row justify-center items-center gap-20 z-11 absolute bottom-20"
+                    >
                         <img
                             class="header__nav-bar-social-facebook"
                             src="resources/Imagenes/icon-facebook.svg"
@@ -52,27 +81,46 @@
                 </nav>
             </div>
         </header>
-        <main class="container">
-            <section class="hero">
-                <div class="hero__info">
-                    <h1 class="hero__info-title">
+        <main class="text-gray-700">
+            <!-- HERO SECTION -->
+            <section
+                class="hero max-w-[1200px] mx-auto grid md:grid-cols-2 gap-25 md:gap-5 items-center my-15 py-15"
+            >
+                <div
+                    class="hero__info grid grid-rows-3 justify-items-center md:justify-items-start items-center gap-10 order-2 md:order-1"
+                >
+                    <h1
+                        class="hero__info-title font-bold text-center md:text-left text-7xl md:text-8xl"
+                    >
                         A Simple Bookmark<br />Manager
                     </h1>
-                    <p class="hero__info-text">
+                    <p
+                        class="hero__info-text text-4xl leading-15 w-[70%] md:w-[80%] text-(--color-text-grey) text-center md:text-left"
+                    >
                         A clean and simple interface to organize your favorite
                         websites. Open a new browser tab and see your sites load
                         instantly. Try it for free.
                     </p>
-                    <div class="hero__info-button">
-                        <a class="hero__info-button--chrome" href="#">
+                    <div
+                        class="hero__info-button flex flex-row gap-10 self-start"
+                    >
+                        <a
+                            class="hero__info-button--chrome font-bold py-5 px-10 border-2 border-transparent rounded-lg bg-(--color-blue-bg) text-(--color-grey-bg) hover:bg-white hover:text-(--color-blue-bg) hover:border-(--color-blue-bg)"
+                            href="#"
+                        >
                             Get it on Chrome
                         </a>
-                        <a class="hero__info-button--firefox shadow" href="#">
+                        <a
+                            class="hero__info-button--firefox font-bold shadow py-5 px-10 border-2 border-transparent rounded-lg bg-(--color-grey-bg) hover:border-(--color-blue-bg-dark) hover:text-(--color-blue-bg-dark)"
+                            href="#"
+                        >
                             Get it on Firefox
                         </a>
                     </div>
                 </div>
-                <div class="hero__img">
+                <div
+                    class="hero__img relative inline-block before:absolute before:-inset-1 before:-z-1 before:block before:bg-(--color-blue-bg) before:top-[25%] md:before:top-[30%] before:left-[20%] md:before:left-[30%] before:h-[75%] md:before:h-[80%] before:w-[90%] md:before:w-[90%] before:rounded-bl-[20rem] order-1 md:order-2"
+                >
                     <img
                         class="hero__img-svg"
                         src="resources/Imagenes/illustration-hero.svg"
@@ -80,98 +128,160 @@
                     />
                 </div>
             </section>
-            <section class="features">
+            <!-- FEATURES SECTION -->
+            <section class="features max-w-[1200px] mx-auto my-30 py-30">
                 <div class="features__header">
-                    <h2>Features</h2>
-                    <p class="features__header-text">
+                    <h2 class="text-6xl font-bold text-center mb-10">
+                        Features
+                    </h2>
+                    <p
+                        class="features__header-text text-4xl leading-15 w-[70%] md:w-[40%] text-(--color-text-grey) text-center mx-auto mb-20"
+                    >
                         Our aim is to make it quick and easy for you to access
                         your favorite websites. Your bookmarks sync btween your
                         devices so you can access on the go.
                     </p>
                 </div>
-                <div class="features__container">
+                <div
+                    class="features__container grid justify-center justify-items-center"
+                >
                     <!-- Navigation Tabs -->
-                    <div class="features__tabs">
-                        <hr class="features__tabs-divider" />
-                        <div class="features__tabs-label" data-tab="1">
-                            Simple Bookmarking
+                    <div
+                        class="features__tabs flex flex-col md:grid md:grid-rows-2 md:grid-cols-3 w-[80%] md:justify-items-center mb-30 md:mb-0"
+                    >
+                        <hr
+                            class="features__tabs-divider md:hidden opacity-25"
+                        />
+                        <div
+                            class="features__tabs-label text-3xl text-center py-10 w-full border-2 border-transparent border-b-(--color-red-bg) cursor-pointer"
+                            data-tab="1"
+                        >
+                            <p class="tracking-wider">Simple Bookmarking</p>
                         </div>
-                        <hr class="features__tabs-divider" />
-                        <div class="features__tabs-label" data-tab="2">
-                            Speedy Searching
+                        <hr
+                            class="features__tabs-divider md:hidden opacity-25"
+                        />
+                        <div
+                            class="features__tabs-label text-3xl text-center py-10 w-full border-2 border-transparent cursor-pointer"
+                            data-tab="2"
+                        >
+                            <p class="tracking-wider">Speedy Searching</p>
                         </div>
-                        <hr class="features__tabs-divider" />
-                        <div class="features__tabs-label" data-tab="3">
-                            Easy Sharing
+                        <hr
+                            class="features__tabs-divider md:hidden opacity-25"
+                        />
+                        <div
+                            class="features__tabs-label text-3xl text-center py-10 w-full border-2 border-transparent cursor-pointer"
+                            data-tab="3"
+                        >
+                            <p class="tracking-wider">Easy Sharing</p>
                         </div>
-                        <hr class="features__tabs-divider" />
+                        <hr
+                            class="features__tabs-divider w-full opacity-25 col-start-1 col-end-4"
+                        />
                     </div>
                     <!-- Content Sections -->
-                    <div class="features__content features__content--1 active">
-                        <div class="features__content-img--1">
+                    <div
+                        class="features__content features__content--1 grid grid-cols-1 md:grid-cols-2 gap-15 justify-items-center items-center"
+                    >
+                        <div
+                            class="features__content-img--1 w-[80%] md:w-full justify-items-center relative inline-block before:absolute before:-inset-1 before:-z-1 before:block before:bg-(--color-blue-bg) before:top-[25%] before:left-[-20%] before:h-[95%] before:w-[100%] before:rounded-r-[20rem]"
+                        >
                             <img
                                 src="resources/Imagenes/illustration-features-tab-1.svg"
                                 alt="feature-1"
                             />
                         </div>
-                        <div class="features__content-text">
-                            <h2 class="features__content-text-title">
+                        <div
+                            class="features__content-text grid row-auto gap-10 justify-items-center md:justify-items-start mt-30 md:mt-0"
+                        >
+                            <h2
+                                class="features__content-text-title text-6xl font-bold"
+                            >
                                 Bookmark in one click
                             </h2>
-                            <p class="features__content-text-text">
+                            <p
+                                class="features__content-text-text text-4xl leading-15 w-[75%] text-(--color-text-grey)"
+                            >
                                 Organize your bookmarks however you like. Our
                                 simple drag-and-drop interface gives you
                                 complete control over how you manage your
                                 favorite sites.
                             </p>
-                            <div class="features__info">
-                                <a class="features__info-text" href="#"
+                            <div class="features__info my-5 hidden md:block">
+                                <a
+                                    class="features__info-text shadow bg-(--color-blue-bg) text-white rounded-lg py-6 px-10 font-bold"
+                                    href="#"
                                     >More info</a
                                 >
                             </div>
                         </div>
                     </div>
-                    <div class="features__content features__content--2">
-                        <div class="features__content-img--2">
+                    <div
+                        class="features__content features__content--2 grid-cols-1 md:grid-cols-2 gap-15 justify-items-center items-center hidden"
+                    >
+                        <div
+                            class="features__content-img--2 w-[80%] md:w-full justify-items-center relative inline-block before:absolute before:-inset-1 before:-z-1 before:block before:bg-(--color-blue-bg) before:top-[20%] before:left-[-20%] before:h-[85%] before:w-[88%] before:rounded-r-[40rem]"
+                        >
                             <img
                                 src="resources/Imagenes/illustration-features-tab-2.svg"
                                 alt="feature-2"
                             />
                         </div>
-                        <div class="features__content-text">
-                            <h2 class="features__content-text-title">
+                        <div
+                            class="features__content-text grid row-auto gap-10 justify-items-center md:justify-items-start mt-30 md:mt-0"
+                        >
+                            <h2
+                                class="features__content-text-title text-6xl font-bold"
+                            >
                                 Intelligent search
                             </h2>
-                            <p class="features__content-text-text">
+                            <p
+                                class="features__content-text-text text-4xl leading-15 w-[75%] text-(--color-text-grey)"
+                            >
                                 Our powerful search feature will help you find
                                 saved sites in no time at all. No need to trawl
                                 through all of your bookmarks.
                             </p>
-                            <div class="features__info">
-                                <a class="features__info-text" href="#"
+                            <div class="features__info my-5 hidden md:block">
+                                <a
+                                    class="features__info-text bg-(--color-blue-bg) text-white rounded-lg py-6 px-10 font-bold"
+                                    href="#"
                                     >More info</a
                                 >
                             </div>
                         </div>
                     </div>
-                    <div class="features__content features__content--3">
-                        <div class="features__content-img--3">
+                    <div
+                        class="features__content features__content--3 hidden grid-cols-1 md:grid-cols-2 gap-15 justify-items-center items-center"
+                    >
+                        <div
+                            class="features__content-img--3 w-[80%] md:w-full justify-items-center relative inline-block before:absolute before:-inset-1 before:-z-1 before:block before:bg-(--color-blue-bg) before:top-[22%] before:left-[-20%] before:h-[90%] before:w-[88%] before:rounded-r-[40rem]"
+                        >
                             <img
                                 src="resources/Imagenes/illustration-features-tab-3.svg"
                                 alt="feature-3"
                             />
                         </div>
-                        <div class="features__content-text">
-                            <h2 class="features__content-text-title">
+                        <div
+                            class="features__content-text grid row-auto gap-10 justify-items-center md:justify-items-start mt-30 md:mt-0"
+                        >
+                            <h2
+                                class="features__content-text-title text-6xl font-bold"
+                            >
                                 Share your bookmarks
                             </h2>
-                            <p class="features__content-text-text">
+                            <p
+                                class="features__content-text-text text-4xl leading-15 w-[75%] text-(--color-text-grey)"
+                            >
                                 Easily share your bookmarks and collections with
                                 others. Create a shareable link that you can
                                 send at the click of a button.
                             </p>
-                            <div class="features__info">
-                                <a class="features__info-text" href="#"
+                            <div class="features__info my-5 hidden md:block">
+                                <a
+                                    class="features__info-text bg-(--color-blue-bg) text-white rounded-lg py-6 px-10 font-bold"
+                                    href="#"
                                     >More info</a
                                 >
                             </div>
@@ -179,125 +289,153 @@
                     </div>
                 </div>
             </section>
-            <section class="downloads">
+            <!-- DOWNLOAD SECTION -->
+            <section class="downloads max-w-[1200px] mx-auto my-30 py-30">
                 <div class="downloads__header">
-                    <h2 class="downloads__header-title">
+                    <h2
+                        class="downloads__header-title text-6xl font-bold text-center mb-10"
+                    >
                         Download the extension
                     </h2>
-                    <p class="downloads__header-text">
+                    <p
+                        class="downloads__header-text text-4xl leading-15 w-[70%] md:w-[40%] text-(--color-text-grey) text-center mx-auto"
+                    >
                         We've got more browsers in the pipeline. Please do let
                         us know if you've got a favorite you'd like us to
                         prioritize.
                     </p>
                 </div>
-                <div class="downloads__navigators">
-                    <div class="downloads__navigators-container">
+                <div
+                    class="downloads__navigators flex flex-col md:flex-row justify-center items-center gap-30 md:gap-15 my-15"
+                >
+                    <!-- CHROME -->
+                    <div
+                        class="downloads__navigators-container shadow-lg flex flex-col justify-center items-center py-10 rounded-3xl"
+                    >
                         <img
+                            class="my-15"
                             src="resources/Imagenes/logo-chrome.svg"
                             alt="Chrome-logo"
                         />
-                        <h3 class="downloads__navigators-container-title">
+                        <h3
+                            class="downloads__navigators-container-title text-4xl font-bold my-5"
+                        >
                             Add to Chrome
                         </h3>
-                        <p class="downloads__navigators-container-text">
+                        <p
+                            class="downloads__navigators-container-text text-(--color-text-grey) text-3xl mb-5"
+                        >
                             Minimum version 62
                         </p>
                         <img
-                            class="downloads__navigators-dotsimg"
+                            class="downloads__navigators-dotsimg my-10"
                             src="resources/Imagenes/bg-dots.svg"
                             alt="Dots"
                         />
-                        <button class="downloads__navigators-link">
+                        <button
+                            class="downloads__navigators-link font-bold py-5 px-15 border-2 border-transparent rounded-lg bg-(--color-blue-bg) text-(--color-grey-bg) hover:bg-white hover:text-(--color-blue-bg) hover:border-(--color-blue-bg) cursor-pointer"
+                        >
                             Add & Install Extension
                         </button>
                     </div>
-                    <div class="downloads__navigators-container">
+                    <!-- FIREFOX -->
+                    <div
+                        class="downloads__navigators-container shadow-lg flex flex-col justify-center items-center md:mt-40 py-10 rounded-3xl"
+                    >
                         <img
+                            class="my-15"
                             src="resources/Imagenes/logo-firefox.svg"
                             alt="Firefox-logo"
                         />
-                        <h3 class="downloads__navigators-container-title">
+                        <h3
+                            class="downloads__navigators-container-title text-4xl font-bold my-5"
+                        >
                             Add to Firefox
                         </h3>
-                        <p class="downloads__navigators-container-text">
+                        <p
+                            class="downloads__navigators-container-text text-(--color-text-grey) text-3xl mb-5"
+                        >
                             Minumum version 55
                         </p>
                         <img
-                            class="downloads__navigators-dotsimg"
+                            class="downloads__navigators-dotsimg my-10"
                             src="resources/Imagenes/bg-dots.svg"
                             alt="Dots"
                         />
-                        <button class="downloads__navigators-link">
+                        <button
+                            class="downloads__navigators-link font-bold py-5 px-15 border-2 border-transparent rounded-lg bg-(--color-blue-bg) text-(--color-grey-bg) hover:bg-white hover:text-(--color-blue-bg) hover:border-(--color-blue-bg) cursor-pointer"
+                        >
                             Add & Install Extension
                         </button>
                     </div>
-                    <div class="downloads__navigators-container">
+                    <!-- OPERA -->
+                    <div
+                        class="downloads__navigators-container shadow-lg flex flex-col justify-center items-center md:mt-80 py-10 rounded-3xl"
+                    >
                         <img
+                            class="my-15"
                             src="resources/Imagenes/logo-opera.svg"
                             alt="Opera-logo"
                         />
-                        <h3 class="downloads__navigators-container-title">
+                        <h3
+                            class="downloads__navigators-container-title text-4xl font-bold my-5"
+                        >
                             Add to Opera
                         </h3>
-                        <p class="downloads__navigators-container-text">
+                        <p
+                            class="downloads__navigators-container-text text-(--color-text-grey) text-3xl mb-5"
+                        >
                             Minumum version 46
                         </p>
                         <img
-                            class="downloads__navigators-dotsimg"
+                            class="downloads__navigators-dotsimg my-10"
                             src="resources/Imagenes/bg-dots.svg"
                             alt="Dots"
                         />
-                        <button class="downloads__navigators-link">
+                        <button
+                            class="downloads__navigators-link font-bold py-5 px-15 border-2 border-transparent rounded-lg bg-(--color-blue-bg) text-(--color-grey-bg) hover:bg-white hover:text-(--color-blue-bg) hover:border-(--color-blue-bg) cursor-pointer"
+                        >
                             Add & Install Extension
                         </button>
                     </div>
                 </div>
             </section>
-            <section class="faqs">
-                <div class="faqs__header">
-                    <h2 class="faqs__header-title">
+            <!-- FAQS SECTION -->
+            <section class="faqs max-w-[1200px] mx-auto">
+                <div class="faqs__header flex flex-col items-center">
+                    <h2
+                        class="faqs__header-title text-6xl w-[70%] md:w-full font-bold text-center mb-10"
+                    >
                         Frequently Asked Questions
                     </h2>
-                    <p class="faqs__header-text">
+                    <p
+                        class="faqs__header-text text-4xl leading-15 w-[70%] md:w-[40%] text-(--color-text-grey) text-center mx-auto mb-20"
+                    >
                         Here are some of our FAQS. If you have any other
                         questions you'd like answered please feel free to email
                         us.
                     </p>
                 </div>
-                <div class="faqs__tabs">
-                    <hr class="faqs__tabs-divider" />
-                    <div class="faqs__tabs-container">
-                        <div class="faqs__tabs-container-question">
-                            <p>What is a Bookmark?</p>
-                            <img
-                                class="faq__tabs-container-question-arrow"
-                                src="resources/Imagenes/icon-arrow.svg"
-                                alt="Arrow-icon"
-                            />
-                        </div>
-                        <div class="faqs__tabs-container-answer">
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Soluta, id architecto.
-                                Quibusdam maxime voluptas similique, nihil
-                                tempore natus deleniti tenetur accusantium,
-                                reprehenderit repellat laudantium perferendis,
-                                aperiam aliquam facere unde ipsa.
-                            </p>
-                        </div>
-                    </div>
-                    <hr class="faqs__tabs-divider" />
-                    <div class="faqs__tabs-container">
-                        <div class="faqs__tabs-container-question">
-                            <p>How can I create a Bookmark?</p>
+                <div class="faqs__tabs w-[80%] md:w-[45%] mx-auto">
+                    <hr class="faqs__tabs-divider hidden md:block opacity-20" />
+                    <!-- FIRST -->
+                    <div
+                        class="faqs__tabs-container flex flex-row justify-start flex-wrap"
+                    >
+                        <div
+                            class="faqs__tabs-container-question w-[97%] flex flex-row justify-between items-center"
+                        >
+                            <p class="text-4xl my-10">What is a Bookmark?</p>
                             <img
                                 class="faqs__tabs-container-question-arrow"
                                 src="resources/Imagenes/icon-arrow.svg"
                                 alt="Arrow-icon"
                             />
                         </div>
-                        <div class="faqs__tabs-container-answer">
-                            <p>
+                        <div class="faqs__tabs-container-answer hidden">
+                            <p
+                                class="text-3xl leading-15 text-(--color-text-grey) my-5"
+                            >
                                 Lorem ipsum dolor sit, amet consectetur
                                 adipisicing elit. Soluta, id architecto.
                                 Quibusdam maxime voluptas similique, nihil
@@ -307,18 +445,27 @@
                             </p>
                         </div>
                     </div>
-                    <hr class="faqs__tabs-divider" />
-                    <div class="faqs__tabs-container">
-                        <div class="faqs__tabs-container-question">
-                            <p>Is there a mobile app?</p>
+                    <hr class="faqs__tabs-divider opacity-20" />
+                    <!-- SECOND -->
+                    <div
+                        class="faqs__tabs-container flex flex-row justify-start flex-wrap"
+                    >
+                        <div
+                            class="faqs__tabs-container-question w-[97%] flex flex-row justify-between items-center"
+                        >
+                            <p class="text-4xl my-10">
+                                How can I create a Bookmark?
+                            </p>
                             <img
-                                class="faq__tabs-container-question-arrow"
+                                class="faqs__tabs-container-question-arrow"
                                 src="resources/Imagenes/icon-arrow.svg"
                                 alt="Arrow-icon"
                             />
                         </div>
-                        <div class="faqs__tabs-container-answer">
-                            <p>
+                        <div class="faqs__tabs-container-answer hidden">
+                            <p
+                                class="text-3xl leading-15 text-(--color-text-grey) my-5"
+                            >
                                 Lorem ipsum dolor sit, amet consectetur
                                 adipisicing elit. Soluta, id architecto.
                                 Quibusdam maxime voluptas similique, nihil
@@ -328,18 +475,25 @@
                             </p>
                         </div>
                     </div>
-                    <hr class="faqs__tabs-divider" />
-                    <div class="faqs__tabs-container">
-                        <div class="faqs__tabs-container-question">
-                            <p>What about other Chromium browsers?</p>
+                    <hr class="faqs__tabs-divider opacity-20" />
+                    <!-- THIRD -->
+                    <div
+                        class="faqs__tabs-container flex flex-row justify-start flex-wrap"
+                    >
+                        <div
+                            class="faqs__tabs-container-question w-[97%] flex flex-row justify-between items-center"
+                        >
+                            <p class="text-4xl my-10">Is there a mobile app?</p>
                             <img
-                                class="faq__tabs-container-question-arrow"
+                                class="faqs__tabs-container-question-arrow"
                                 src="resources/Imagenes/icon-arrow.svg"
                                 alt="Arrow-icon"
                             />
                         </div>
-                        <div class="faqs__tabs-container-answer">
-                            <p>
+                        <div class="faqs__tabs-container-answer hidden">
+                            <p
+                                class="text-3xl leading-15 text-(--color-text-grey) my-5"
+                            >
                                 Lorem ipsum dolor sit, amet consectetur
                                 adipisicing elit. Soluta, id architecto.
                                 Quibusdam maxime voluptas similique, nihil
@@ -349,43 +503,91 @@
                             </p>
                         </div>
                     </div>
-                    <hr class="faqs__tabs-divider" />
+                    <hr class="faqs__tabs-divider opacity-20" />
+                    <!-- FOURTH -->
+                    <div
+                        class="faqs__tabs-container flex flex-row justify-start flex-wrap"
+                    >
+                        <div
+                            class="faqs__tabs-container-question w-[97%] flex flex-row justify-between items-center"
+                        >
+                            <p class="text-4xl my-10">
+                                What about other Chromium browsers?
+                            </p>
+                            <img
+                                class="faqs__tabs-container-question-arrow"
+                                src="resources/Imagenes/icon-arrow.svg"
+                                alt="Arrow-icon"
+                            />
+                        </div>
+                        <div class="faqs__tabs-container-answer hidden">
+                            <p
+                                class="text-3xl leading-15 text-(--color-text-grey) my-5"
+                            >
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Soluta, id architecto.
+                                Quibusdam maxime voluptas similique, nihil
+                                tempore natus deleniti tenetur accusantium,
+                                reprehenderit repellat laudantium perferendis,
+                                aperiam aliquam facere unde ipsa.
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="faqs__tabs-divider opacity-20" />
                 </div>
-                <div class="faqs__button">
-                    <a class="faqs__button-link" href="#">More info</a>
+                <div class="faqs__button my-30 text-center">
+                    <a
+                        class="faqs__button-link bg-(--color-blue-bg) text-white rounded-lg py-6 px-10 font-bold"
+                        href="#"
+                        >More info</a
+                    >
                 </div>
             </section>
-            <section class="form">
-                <div class="form__container">
-                    <h4 class="form__container-subtitle">
+            <!-- FORM SECTION -->
+            <section
+                class="form mt-30 py-30 bg-(--color-blue-bg) text-(--color-grey-bg) w-full"
+            >
+                <div
+                    class="form__container flex flex-col justify-center items-center gap-15"
+                >
+                    <h4
+                        class="form__container-subtitle uppercase tracking-[0.5rem]"
+                    >
                         35,000+ already joined
                     </h4>
-                    <h2 class="form__container-title">
+                    <h2
+                        class="form__container-title text-6xl font-bold w-[70%] md:w-[25%] text-center"
+                    >
                         Stay up-to-date with what we're doing
                     </h2>
-                    <form class="form__inputs" id="contact--form">
-                        <div class="form__inputs-email-container">
+                    <form
+                        class="form__inputs grid grid-cols-1 md:grid-cols-3 gap-[3rem] md:gap-[2rem] max-w-[450px] w-[80%] md:w-full justify-center items-center"
+                        id="contact--form"
+                    >
+                        <div
+                            class="form__inputs-email-container md:col-[1/3] relative"
+                        >
                             <label class="form__inputs-email-container-label">
                                 <input
-                                    class="form__inputs-email-container-input"
+                                    class="form__inputs-email-container-input w-full p-5 text-2xl text-(--color-text-grey) rounded-lg bg-(--color-grey-bg) relative border-2 border-transparent"
                                     type="email"
                                     required
                                     placeholder="Enter your email address"
                                 />
                                 <span
-                                    class="form__inputs-email-container-error-message"
+                                    class="form__inputs-email-container-error-message hidden italic font-bold w-full absolute mt-[10%] md:mt-[12%] ml-[-100%] p-1 rounded-b-lg bg-(--color-red-bg)"
                                 >
                                     Whoops, make sure it's an email
                                 </span>
                             </label>
                             <img
-                                class="form__inputs-email-container-error"
+                                class="form__inputs-email-container-error hidden absolute top-[24%] right-[3%]"
                                 src="./resources/Imagenes/icon-error.svg"
                                 alt="error-icon"
                             />
                         </div>
                         <button
-                            class="form__inputs-email-container-button"
+                            class="form__inputs-email-container-button bg-(--color-red-bg) text-white font-bold border-transparent rounded-lg py-4 px-15 hover:bg-white hover:text-red-400 hover:border-red-400 border-2 hover:cursor-pointer"
                             type="submit"
                             form="contact--form"
                         >
@@ -395,33 +597,52 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
-            <div class="footer__elements">
-                <div class="footer__elements-nav">
+        <footer
+            class="footer mx-auto bg-(--color-blue-bg-dark) text-(--color-grey-bg) w-full py-5"
+        >
+            <div
+                class="footer__elements max-w-[1200px] mx-auto grid md:grid-cols-2 gap-20 md:gap-5 py-10 justify-self-start items-center"
+            >
+                <div
+                    class="footer__elements-nav grid grid-cols-1 md:grid-cols-4 gap-15 md:gap-20 justify-items-center items-center"
+                >
                     <img
                         class="footer__elements-nav-bookmark"
                         src="resources/Imagenes/logo-bookmark-white.svg"
                         alt="Bookmark-logo"
                     />
-                    <a class="footer__elements-nav-link" href="#">Features</a>
-                    <a class="footer__elements-nav-link" href="#">Pricing</a>
-                    <a class="footer__elements-nav-link" href="#">Contact</a>
+                    <a
+                        class="footer__elements-nav-link uppercase font-medium tracking-widest hover:filter-(--animate-fill-red)"
+                        href="#"
+                        >Features</a
+                    >
+                    <a
+                        class="footer__elements-nav-link uppercase font-medium tracking-widest hover:filter-(--animate-fill-red)"
+                        href="#"
+                        >Pricing</a
+                    >
+                    <a
+                        class="footer__elements-nav-link uppercase font-medium tracking-widest hover:filter-(--animate-fill-red)"
+                        href="#"
+                        >Contact</a
+                    >
                 </div>
-                <div class="footer__elements-social">
+                <div
+                    class="footer__elements-social grid grid-cols-2 mx-auto md:mx-0 gap-20 justify-items-center md:justify-self-end items-center"
+                >
                     <img
-                        class="footer__elements-social-facebook"
+                        class="footer__elements-social-facebook hover:filter-(--animate-fill-red) hover:cursor-pointer"
                         src="resources/Imagenes/icon-facebook.svg"
                         alt="Facebook-icon"
                     />
                     <img
-                        class="footer__elements-social-twitter"
+                        class="footer__elements-social-twitter hover:filter-(--animate-fill-red) hover:cursor-pointer"
                         src="resources/Imagenes/icon-twitter.svg"
                         alt="Twitter-icon"
                     />
                 </div>
             </div>
         </footer>
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="./js/activeView.js"></script>
     </body>
 </html>
